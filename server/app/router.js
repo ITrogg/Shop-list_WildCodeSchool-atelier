@@ -20,7 +20,8 @@ router.get("/items", (req, res) => {
       s.label AS status 
       FROM product AS p 
       INNER JOIN category AS c ON p.category_id = c.id 
-      INNER JOIN status AS s ON p.status_id = s.id`
+      INNER JOIN status AS s ON p.status_id = s.id
+      ORDER BY p.id`
     )
     .then(([product]) => {
       res.status(200).json(product);
