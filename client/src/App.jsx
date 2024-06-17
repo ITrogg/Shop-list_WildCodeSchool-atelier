@@ -1,5 +1,8 @@
 import { useLoaderData } from "react-router-dom";
+
 import Row from "./components/ListRow";
+import AddItemForm from "./components/AddItemForm";
+
 import "./App.css";
 
 function App() {
@@ -22,6 +25,7 @@ function App() {
           ))}
         </tbody>
       </table>
+      <AddItemForm />
     </main>
   );
 }

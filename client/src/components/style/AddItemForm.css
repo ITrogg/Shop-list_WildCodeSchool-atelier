@@ -1,0 +1,50 @@
+* {
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.add-item-form {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  background-color: #fef3ff; /* Couleur de fond */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.add-item-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #a54ead; /* Couleur du texte pour les labels */
+}
+
+.add-item-form input[type="text"],
+.add-item-form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.add-item-form select {
+  background-color: white; /* Fond des selects */
+}
+
+.add-item-form button {
+  background-color: #300a33; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte du bouton */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.add-item-form button:hover {
+  background-color: #6d1875; /* Couleur de fond du bouton au survol */
+}
