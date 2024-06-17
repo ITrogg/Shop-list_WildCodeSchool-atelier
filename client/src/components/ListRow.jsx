@@ -1,10 +1,12 @@
-function Row({ item }) {
+function Row({ item, cssClass }) {
   return (
-    <tr>
-      <td>{item.title}</td>
-      <td>{item.category}</td>
-      <td>{item.status}</td>
-      <td>{item.link}</td>
+    <tr className={cssClass}>
+      <td className="title">{item.title}</td>
+      <td className="label">{item.category}</td>
+      <td className="label">{item.status}</td>
+      <td className="optional">
+        {!item.link ? "" : <a href={item.link}>Link</a>}
+      </td>
     </tr>
   );
 }

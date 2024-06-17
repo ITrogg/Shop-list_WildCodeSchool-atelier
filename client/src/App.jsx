@@ -4,13 +4,26 @@ import "./App.css";
 
 function App() {
   const items = useLoaderData();
+  const headerTable = {
+    title: "Nom du Produit",
+    link: "no-link",
+    category: "Type de produit",
+    status: "Catégorie budget",
+  };
 
   return (
-    <table>
-      {items.map((item) => (
-        <Row key={item.id} item={item} />
-      ))}
-    </table>
+    <div className="page-container">
+      <table className="data-table">
+        <thead>
+          <Row cssClass="header-row" item={headerTable} />
+        </thead>
+        <tbody>
+          {items.map((item) => (
+            <Row cssClass="item-row" key={item.id} item={item} />
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
