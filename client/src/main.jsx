@@ -17,11 +17,11 @@ const router = createBrowserRouter([
         .then((res) => res.data),
   },
   {
-    path: "/details/:id",
+    path: "/entry/:id",
     element: <Item />,
     loader: async ({ params }) => {
       const res = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/items/${params}`
+        `${import.meta.env.VITE_API_URL}/api/items/${params.id}`
       );
       return res.data;
     },
