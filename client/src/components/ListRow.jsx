@@ -1,10 +1,10 @@
 function Row({ item }) {
   return (
     <tr>
-      <td>{item.product_name}</td>
-      <td>{item.category_id}</td>
-      <td>{item.status_id}</td>
-      <td>{item.link_to}</td>
+      <td>{item.title}</td>
+      <td>{item.category}</td>
+      <td>{item.status}</td>
+      <td>{item.link}</td>
     </tr>
   );
 }
