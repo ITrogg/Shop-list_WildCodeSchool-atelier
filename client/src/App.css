@@ -31,8 +31,13 @@
   background-color: #fef3ff;
 }
 
-.title {
+.title a {
   font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+.title a:hover {
+  font-size: larger;
 }
 
 .optional {
