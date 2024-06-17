@@ -9,10 +9,12 @@ function App() {
     <main className="page-container">
       <table className="data-table">
         <thead className="header-row ">
-          <th className="title">Nom du Produit</th>
-          <th className="label">Type de produit</th>
-          <th className="label">Catégorie budget</th>
-          <th className="optional">Lien (si renseigné)</th>
+          <tr>
+            <th className="title">Nom du Produit</th>
+            <th className="label">Type de produit</th>
+            <th className="label">Catégorie budget</th>
+            <th className="optional">Lien (si renseigné)</th>
+          </tr>
         </thead>
         <tbody>
           {items.map((item) => (
