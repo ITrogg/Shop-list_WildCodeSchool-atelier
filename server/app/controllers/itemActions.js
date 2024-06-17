@@ -28,16 +28,24 @@ const browse = async (req, res, next) => {
 const read = async (req, res, next) => {
   try {
     // Fetch a specific item from the database based on the provided ID
-    const item = await client.query("SELECT * FROM product where id = ? ", [
-      req.params.id,
-    ]);
+    const item = await client.query(
+      `SELECT p.product_name AS title,
+      p.link_to AS link,
+      c.label AS category, 
+      s.label AS status 
+      FROM product AS p
+      INNER JOIN category AS c ON p.category_id = c.id 
+      INNER JOIN status AS s ON p.status_id = s.id
+      WHERE p.id = ?`,
+      [req.params.id]
+    );
 
     // If the item is not found, respond with HTTP 404 (Not Found)
     // Otherwise, respond with the item in JSON format
     if (item == null) {
       res.sendStatus(404);
     } else {
-      res.json(item[0]);
+      res.json(item[0][0]);
     }
   } catch (err) {
     // Pass any errors to the error-handling middleware
