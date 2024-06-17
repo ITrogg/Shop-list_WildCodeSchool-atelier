@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     element: <App />,
     loader: () =>
       axios
-        .get(`{import.meta.env.VITE_API_URL}/api/wishlist`)
+        .get(`${import.meta.env.VITE_API_URL}/api/items`)
         .then((res) => res.data),
   },
 ]);
