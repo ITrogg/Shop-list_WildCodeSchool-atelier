@@ -11,7 +11,6 @@ function AddItemForm() {
         Lien :
         <input type="text" id="link" name="link" />
       </label>
-
       <label htmlFor="category">
         Catégorie :
         <select id="category" name="category" required>
@@ -32,7 +31,6 @@ function AddItemForm() {
           <option value="status3">Mettre argent de côté</option>
         </select>
       </label>
-
       <button type="submit">Ajouter</button>
     </form>
   );
