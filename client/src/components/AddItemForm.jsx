@@ -6,18 +6,24 @@ function AddItemForm() {
   const [category, setCategory] = useState("");
   const [status, setStatus] = useState("");
   const [link, setLink] = useState("");
+
   const handleAddItemForm = (event) => {
     event.preventDefault();
-    console.log("Formulaire soumis avec les données :", {
+    console.info("Formulaire soumis avec les données :", {
       title,
       link,
       category,
       status,
     });
+    setTitle("");
+    setCategory("");
+    setStatus("");
+    setLink("");
   };
+
   return (
-    <form className="add-item-form">
-      <label onSubmit={handleAddItemForm} htmlFor="title">
+    <form className="add-item-form" onSubmit={handleAddItemForm}>
+      <label htmlFor="title">
         Nom du produit :
         <input
           type="text"
@@ -46,7 +52,7 @@ function AddItemForm() {
         </select>
       </label>
       <label htmlFor="status">
-        Catégorie de budjet :
+        Catégorie de budget :
         <select
           id="status"
           name="status"
