@@ -6,7 +6,8 @@ const browse = async (req, res, next) => {
   try {
     // Fetch all items from the database
     const items = await client.query(
-      `SELECT p.product_name AS title,
+      `SELECT p.id AS id,
+      p.product_name AS title,
       p.link_to AS link, 
       c.label AS category, 
       s.label AS status 
@@ -29,7 +30,8 @@ const read = async (req, res, next) => {
   try {
     // Fetch a specific item from the database based on the provided ID
     const item = await client.query(
-      `SELECT p.product_name AS title,
+      `SELECT p.id AS id,
+      p.product_name AS title,
       p.link_to AS link,
       c.label AS category, 
       s.label AS status 
