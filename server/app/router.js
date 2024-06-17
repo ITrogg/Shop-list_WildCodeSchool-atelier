@@ -14,7 +14,7 @@ router.get("/items", itemActions.browse);
 // Route to get a specific item by ID
 router.get("/items/:id", itemActions.read);
 // Route to add a new item
-router.post("/items", itemActions.add);
+router.post("/items/:title/:link/:category/:status", itemActions.add);
 
 /* ************************************************************************* */
 

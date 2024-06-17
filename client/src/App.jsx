@@ -10,6 +10,7 @@ function App() {
 
   return (
     <main className="page-container">
+      <AddItemForm />
       <table className="data-table">
         <thead className="header-row ">
           <tr>
@@ -25,7 +26,6 @@ function App() {
           ))}
         </tbody>
       </table>
-      <AddItemForm />
     </main>
   );
 }

@@ -5,13 +5,21 @@
   padding: 0;
 }
 
-.add-item-form {
-  width: 80%;
+.form-container {
+  width: 100%;
   margin: auto;
   padding: 20px;
-  background-color: #fef3ff; /* Couleur de fond */
-  border: 1px solid #ccc;
-  border-radius: 8px;
+}
+
+.add-item-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-item-form .form-group {
+  flex: 1 1 100%; /* Chaque groupe de formulaire prend 100% de la largeur */
+  margin-right: 20px; /* Espace entre les groupes de formulaire */
+  margin-bottom: 15px;
 }
 
 .add-item-form label {
@@ -25,7 +33,6 @@
 .add-item-form select {
   width: 100%;
   padding: 8px;
-  margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1em;

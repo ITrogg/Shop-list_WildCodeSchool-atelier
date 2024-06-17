@@ -65,9 +65,10 @@ const add = async (req, res, next) => {
 
   try {
     // Insert the item into the database
-    const insertId = await client.query("INSERT INTO items(title) VALUES (?)", [
-      item.title,
-    ]);
+    const insertId = await client.query(
+      "INSERT INTO product (product_name, link_to,  category_id, status_id) VALUES (?)",
+      [item.title, item.link, item.category, item.status]
+    );
 
     // Respond with HTTP 201 (Created) and the ID of the newly inserted item
     res.status(201).json({ insertId });
