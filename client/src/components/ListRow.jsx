@@ -1,6 +1,6 @@
-function Row({ item, cssClass }) {
+function Row({ item }) {
   return (
-    <tr className={cssClass}>
+    <tr className="item-row">
       <td className="title">{item.title}</td>
       <td className="label">{item.category}</td>
       <td className="label">{item.status}</td>

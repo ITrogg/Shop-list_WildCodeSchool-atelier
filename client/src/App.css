@@ -1,21 +1,13 @@
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  color: black;
-  margin: 0;
-}
-/* Reset basic styles */
 * {
+  font-family: "Lato", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Page container styles */
 .page-container {
-  margin: 20px; /* Marge sur les côtés de la page */
+  margin: auto;
+  width: 80%;
 }
 
 /* Table styles */
@@ -33,13 +25,13 @@ body {
 
 /* Header row styles */
 .header-row {
-  background-color: #f0f0f0; /* Couleur de fond différente pour la ligne d'en-tête */
+  background-color: #a54ead; /* Couleur de fond différente pour la ligne d'en-tête */
   font-weight: bold;
 }
 
 /* Alternance des lignes de couleur différente */
 .item-row:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #fef3ff;
 }
 
 /* Styles pour la colonne 'Nom du Produit' */
@@ -55,12 +47,12 @@ body {
 .optional a {
   display: inline-block;
   padding: 5px 10px;
-  background-color: #007bff;
+  background-color: #300a33;
   color: white;
   text-decoration: none;
   border-radius: 4px;
 }
 
 .optional a:hover {
-  background-color: #0056b3;
+  background-color: #6d1875;
 }
