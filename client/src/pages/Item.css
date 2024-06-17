@@ -1,0 +1,33 @@
+/* Couleurs audacieuses */
+.item-container {
+  background-color: #a54ead; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 20px;
+  border-radius: 8px;
+  margin: auto;
+  width: 50%;
+}
+
+.item-title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.item-category,
+.item-status,
+.item-link {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+.item-link a {
+  background-color: white;
+  padding: 5px;
+  border-radius: 15%;
+  color: a54ead;
+  text-decoration: none;
+}
+
+.item-link a:hover {
+  text-decoration: underline;
+}

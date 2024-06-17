@@ -5,6 +5,7 @@ import axios from "axios";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
+import Item from "./pages/Item";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,16 @@ const router = createBrowserRouter([
       axios
         .get(`${import.meta.env.VITE_API_URL}/api/items`)
         .then((res) => res.data),
+  },
+  {
+    path: "/entry/:id",
+    element: <Item />,
+    loader: async ({ params }) => {
+      const res = await axios.get(
+        `${import.meta.env.VITE_API_URL}/api/items/${params.id}`
+      );
+      return res.data;
+    },
   },
 ]);
 
