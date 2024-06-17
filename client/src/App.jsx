@@ -1,7 +1,17 @@
+import { useLoaderData } from "react-router-dom";
+import Row from "./components/ListRow";
 import "./App.css";
 
 function App() {
-  return <h1> Sommething will bien here </h1>;
+  const items = useLoaderData();
+
+  return (
+    <table>
+      {items.map((item) => (
+        <Row key={item.id} item={item} />
+      ))}
+    </table>
+  );
 }
 
 export default App;
